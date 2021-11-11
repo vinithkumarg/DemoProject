@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return HttpResponse("<h1>Hello world</h1>")
+    return render(request, "Boo/home.html")
