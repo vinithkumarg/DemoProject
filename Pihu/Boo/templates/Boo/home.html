@@ -1,92 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pihu</title>
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.1/dist/css/uikit.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/css/uikit.min.css" />
 
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.1/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.1/dist/js/uikit-icons.min.js"></script>
-    </head>
-    <body>
-        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-            <nav class="uk-container uk-container-large" uk-navbar style="position: relative; z-index: 980;">
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.2/dist/js/uikit-icons.min.js"></script>
+    <style>
+        .img-height{
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav bar -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#"> <strong>Logo</strong> </a></li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">Active</a></li>
+                    <li>
+                        <a href="#">Parent</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="uk-cover-container uk-background-cover uk-position-relative" uk-height-viewport="offset-top: true" style="background-image: url(/static/images/2.jpg);"> 
+        <div class="uk-position-center uk-overlay-primary uk-padding">
+            <h2>Loreum ipsum</h2>
+            <h4>Elementum luctus dictumst dictumst</h4>
+        </div> 
+    </div> 
+    <div class="uk-container uk-padding-large uk-padding-remove-horizontal">
+        <div class="uk-text-center">
+            <h1>About</h1>
+        </div>
+        <div class="uk-grid-small uk-grid-match uk-child-width-1-2@m uk-text-center" uk-grid>
+            <div>
+                <h2 class="">Loreum ipsum</h2>
+                <p class="">
+                    Elementum luctus dictumst dictumst ut posuere mollis potenti
+                    <br> dictumst nostra dictumst in curabitur sed nascetur mus Pharetra, montes urna luctus pharetra suscipit commodo malesuada est tincidunt cubilia at vel. Porta eleifend nascetur porttitor, malesuada hendrerit magna, rutrum sociosqu.
+
+                    Mi. <br>
+                    
+                    Curae; risus blandit Egestas. Lobortis blandit Eros bibendum vestibulum etiam ultrices, lorem id proin etiam pulvinar lectus eleifend netus lacus dolor laoreet.
+                    Curae; risus blandit Egestas. Lobortis blandit Eros bibendum vestibulum etiam ultrices, lorem id proin etiam pulvinar lectus eleifend netus lacus dolor laoreet.
+
+                    Semper nulla consequat. Enim duis ut a netus cum sem non at sem commodo porta pretium parturient vulputate dictumst inceptos. Habitant pulvinar nisi quisque vel phasellus nibh eros fermentum adipiscing pulvinar condimentum sodales natoque curae; quisque potenti commodo id.
+                </p>
+             </div>
+            <div>
+                <div class="uk-background-cover" style="background-image: url(/static/images/1.jpg);">
                 </div>
-                <div class="uk-navbar-right">
+            </div>
+        </div>
+    </div>
+    <!-- Image section -->
+    <div class="uk-container uk-padding">
+        <div class="uk-text-center">
+            <h1>Gallery</h1>
+        </div>
+        <div class="uk-grid uk-grid-small uk-flex uk-flex-center" uk-grid uk-lightbox>
+            <div class="uk-panel">
+                <a href="/static/images/2.jpg">
+                    <img src="/static/images/2.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/3.jpg" >
+                    <img src="/static/images/3.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/4.jpg">
+                    <img src="/static/images/4.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/5.jpg" >
+                <img src="/static/images/5.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/6.jpg">
+                    <img src="/static/images/6.jpg" alt="" class="img-height">
+                </a>    
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/7.jpg">
+                    <img src="/static/images/7.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/8.jpg">
+                    <img src="/static/images/8.jpg" alt="" class="img-height">
+                </a>    
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/9.jpg" >
+                    <img src="/static/images/9.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/2.jpg">
+                    <img src="/static/images/2.jpg" alt="" class="img-height">
+                </a>
+            </div>
+            <div class="uk-panel">
+                <a href="/static/images/5.jpg" >
+                <img src="/static/images/5.jpg" alt="" class="img-height">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Video section -->
+    <div class="uk-container uk-padding uk-padding-remove-horizontal">
+        <div class="uk-text-center">
+            <h1>Videos</h1>
+        </div>
         
-                    <ul class="uk-navbar-nav">
-                        <li>
-                            <a class="uk-logo" href="#"><span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
-                            <!-- <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li class="uk-active"><a href="#">Our Products</li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div> -->
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
         <div>
-            <div class="uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="offset-bottom: 10" style="background-image: url(/static/images/food/food1.jpg);">
-                <div>
-                    <div class="uk-card uk-card-hover uk-card-body">
-                        <h3 class="uk-card-title">Hover</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
+            <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive></iframe>
+        </div>
+        
+    </div>
+
+    <div class="uk-container uk-padding">
+        <div class="uk-text-center">
+            <h1>Contact Us</h1>
+        </div>
+        <form>
+            <fieldset class="uk-fieldset">
+        
+                <legend class="uk-legend">Get In Touch</legend>
+        
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Name">
                 </div>
-            </div>
-        </div>
-        <div class="uk-container uk-container-large">
-            <div class="uk-card uk-card-body">
-                <h3 class="uk-card-title uk-text-center">Our Products</h3>
-                <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/fruit.png" width="150" height="150" alt="Border pill"> 
-                            <h4>Groceries</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/cabbage.png" width="150" height="150" alt="Border pill">
-                            <h4>Veggies</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/sea-food.png" width="150" height="150" alt="Border pill"> 
-                            <h4>Sea Food</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/meat.png" width="150" height="150" alt="Border pill"> 
-                            <h4>Meat</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/fried-egg.png" width="150" height="150" alt="Border pill">
-                            <h4>Eggs</h4>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img class="uk-border-pill" src="/static/icon_images/cola.png" width="150" height="150" alt="Border pill"> 
-                            <h4>beverages</h4>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-        </div>
-    </body>
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Email">
+                </div>
+        
+                <div class="uk-margin">
+                    <select class="uk-select">
+                        <option>Option 01</option>
+                        <option>Option 02</option>
+                    </select>
+                </div>
+        
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="uk-text-center">
+                    <button class="uk-button uk-button-primary">Send</button>
+                </div>   
+            </fieldset>
+        </form>
+    </div>
+</body>
 </html>
