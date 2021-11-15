@@ -17,6 +17,40 @@
             object-fit: cover;
             width: 100%;
         }
+        .ds-temp-card {
+            align-items: center;
+            background-color: #f5f7f9;
+            background-color: #ffffff;
+            display: flex;
+            flex: 0 0 13.5rem;
+            flex-direction: column;
+            position: relative;
+        }
+        .ds-maintemp-image {
+            position: relative;
+            width: 100%;
+            padding-top: 62.5%;
+            overflow: hidden;
+        }
+        .ds-phone-image {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .ds-maintemp-image img {
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            overflow: hidden;
+            transition: transform 1s ease-in-out;
+            width: 100%;
+        }
+
+        .ds-maintemp-image:hover img {
+            transform: translateY(calc(-100% + 372px));
+            transition: transform 8s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -73,6 +107,37 @@
              </div>
             <div>
                 <div class="uk-background-cover" style="background-image: url(/static/images/1.jpg);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-padding-large uk-padding-remove-horizontal">
+        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+            <div class="uk-position-relative" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
+                <div class="ds-banner-video" uk-scrollspy-class>
+                    <div class="uk-inline">
+                        <canvas width="960" height="670" style="display: none;"></canvas>
+                        <img src="static/images/laptop.png" width="960" height="670" alt="" >
+                        <div class="ds-temp-card uk-padding-remove" style="position: absolute; top: 5%; left: 12%; right: 12%;box-shadow: none;">
+                            <div class="ds-maintemp-image">
+                                <img src="static/images/screenshot.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-position-relative" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-fade; delay: false;">
+                <div class="ds-banner-video uk-text-center" uk-scrollspy-class>
+                    <div class="uk-inline">
+                        <canvas width="180" height="180" style="display: none;"></canvas>
+                        <img src="static/images/phone2.jpg" width="180" height="180" alt="" >
+                        <div class="ds-temp-card uk-padding-remove" style="position: absolute; top: 5%; left: 12%; right: 12%;box-shadow: none;">
+                            <div class="ds-phone-image">
+                                <img src="static/images/screenshot.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
